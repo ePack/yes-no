@@ -1,0 +1,50 @@
+<link rel="import" href="../../iron-flex-layout/classes/iron-flex-layout.html">
+<link rel="import" href="../../iron-selector/iron-selector.html">
+<link rel="import" href="../../paper-button/paper-button.html">
+<link rel="import" href="../../paper-styles/color.html">
+
+<dom-module id="epack-yes-no">
+<template>
+  <style is="custom-style">
+    paper-button {
+      margin: 50px 10px 0;
+      -webkit-transition: background-color 1s, color 0.2s !important;
+      transition: background-color 1s, color 0.2s !important;
+    }
+    paper-button.iron-selected {
+      color: #fff;
+    }
+    paper-button.iron-selected.no {
+      background: var(--google-red-500);
+    }
+    paper-button.iron-selected.yes {
+      background: var(--google-green-500);
+    }
+  </style>
+
+  <div class="horizontal layout center center-justified layout">
+    <iron-selector selected="{{value}}" class="horizontal layout">
+    <paper-button raised toggle class="no">{{no}}</paper-button>
+    <paper-button raised toggle class="yes">{{yes}}</paper-button>
+  </iron-selector>
+</div>
+
+</template>
+<script>
+  Polymer({
+    is: 'epack-yes-no',
+
+    properties: {
+      value: Number,
+      no: {
+        type: String,
+        value: 'No'
+      },
+      yes: {
+        type: String,
+        value: 'Yes'
+      }
+    }
+  });
+</script>
+</dom-module>

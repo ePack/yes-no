@@ -1,0 +1,25 @@
+{
+  "name": "epack-yes-no",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ePack/yes-no",
+  "authors": [
+    "Maik Hummel <maik@eclip.io>"
+  ],
+  "description": "",
+  "main": "epack-yes-no.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "iron-selector": "polymerElements/iron-selector#~1.0.8",
+    "iron-flex-layout": "polymerElements/iron-flex-layout#~1.2.2",
+    "paper-button": "polymerElements/paper-button#~1.0.11",
+    "paper-styles": "polymerElements/paper-styles#~1.1.2"
+  }
+}
